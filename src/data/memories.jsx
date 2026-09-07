@@ -61,8 +61,23 @@ const memories = {
       },
 
       {
+        speaker: "Girl",
+        text: "I vaguely remember him..."
+      },
+
+      {
         speaker: "Guide",
-        text: "He's handsome... isn't he?"
+        text: "He's someone important to you."
+      },
+
+      {
+        speaker: "Girl",
+        text: "I can feel that..."
+      },
+
+      {
+        speaker: "Guide",
+        text: "And he's really really handsome."
       },
 
       {
@@ -138,7 +153,7 @@ const memories = {
 
       {
         speaker: "Girl",
-        text: "It... feels familiar."
+        text: "It's creepy... but familiar at the same time."
       },
 
       {
@@ -147,8 +162,18 @@ const memories = {
       },
 
       {
+        speaker: "Girl",
+        text: "Oh."
+      },
+
+      {
         speaker: "Guide",
         text: "But the movie isn't what you're supposed to remember."
+      },
+
+      {
+        speaker: "Girl",
+        text: "Hm?"
       },
 
       {
@@ -194,7 +219,7 @@ const memories = {
       },
 
       {
-        speaker: "Memory",
+        speaker: "Girl",
         text: "And then, you said it."
       },
 
@@ -209,12 +234,12 @@ const memories = {
       },
 
       {
-        speaker: "Memory",
+        speaker: "Guide",
         text: "A small moment."
       },
 
       {
-        speaker: "Memory",
+        speaker: "Guide",
         text: "But one neither of you forgot."
       }
     ]
@@ -239,7 +264,7 @@ const memories = {
     dialogue: [
       {
         speaker: "Girl",
-        text: "This place..."
+        text: "This photo..."
       },
 
       {
@@ -249,32 +274,32 @@ const memories = {
 
       {
         speaker: "Girl",
-        text: "I remember waiting."
+        text: "I remember waiting... for him"
       },
 
       {
         speaker: "Girl",
-        text: "I remember seeing him."
+        text: "I remember... seeing him."
       },
 
       {
         speaker: "Memory",
-        text: "After all the calls."
+        text: "After all the calls..."
       },
 
       {
         speaker: "Memory",
-        text: "After all the messages."
+        text: "After all the messages..."
       },
 
       {
         speaker: "Memory",
-        text: "After all the distance."
+        text: "After all the distance..."
       },
 
       {
         speaker: "Memory",
-        text: "You finally stood beside each other."
+        text: "You finally stood beside each other..."
       },
 
       {
@@ -284,7 +309,17 @@ const memories = {
 
       {
         speaker: "Memory",
-        text: "A promise to remember that day."
+        text: "A promise to remember that day..."
+      },
+
+      {
+        speaker: "Memory",
+        text: "A promise that he'll always fight for you..."
+      },
+
+      {
+        speaker: "Memory",
+        text: "A promise... that will last forever."
       }
     ]
   },
@@ -294,69 +329,86 @@ const memories = {
   // FIRST MONTHSARY + 24 HOURS
   // =====================================================
 
-  book: {
-    id: "book",
-    icon: "📖",
+book: {
+  id: "book",
+  icon: "📖",
+  title: "More Than 24 Hours",
 
-    title: "More Than 24 Hours",
+  // First image
+  image: "/memories/book.jpg.jpg",
 
-    image: "/memories/first-monthsary.jpg",
+  // Second image
+  flashbackImage: "/memories/first-monthsary.jpg.jpg",
 
-    description:
-      "Some memories don't need an ending.",
+  description:
+    "Some memories don't need an ending.",
 
-    dialogue: [
-      {
-        speaker: "Girl",
-        text: "A book..."
-      },
+  dialogue: [
+    {
+      speaker: "Girl",
+      text: "A book..."
+    },
 
-      {
-        speaker: "Guide",
-        text: "One that you wanted."
-      },
+    {
+      speaker: "Guide",
+      text: "One that you wanted."
+    }
+  ],
 
-      {
-        speaker: "Girl",
-        text: "Our first monthsary."
-      },
+  afterFlashback: [
+    {
+      speaker: "Girl",
+      text: "Our first monthsary."
+    },
 
-      {
-        speaker: "Memory",
-        text: "And somehow..."
-      },
+    {
+      speaker: "Memory",
+      text: "And somehow..."
+    },
 
-      {
-        speaker: "Memory",
-        text: "One day wasn't enough."
-      },
+    {
+      speaker: "Memory",
+      text: "One day wasn't enough."
+    },
 
-      {
-        speaker: "Girl",
-        text: "We spent more than 24 hours together."
-      },
+    {
+      speaker: "Girl",
+      text: "For the first time..."
+    },
 
-      {
-        speaker: "Memory",
-        text: "Talking."
-      },
+    {
+      speaker: "Girl",
+      text: "We spent more than 24 hours together."
+    },
 
-      {
-        speaker: "Memory",
-        text: "Laughing."
-      },
+    {
+      speaker: "Memory",
+      text: "Talking."
+    },
 
-      {
-        speaker: "Memory",
-        text: "Simply being together."
-      },
+    {
+      speaker: "Memory",
+      text: "Laughing."
+    },
 
-      {
-        speaker: "Girl",
-        text: "I remember."
-      }
-    ]
-  }
-};
+    {
+      speaker: "Memory",
+      text: "Simply being together."
+    },
+
+    {
+      speaker: "Girl",
+      text: "..."
+    },
+
+    {
+      speaker: "Girl",
+      text: "I remember."
+    },
+  ]
+},
+
+}
+
 
 export default memories;

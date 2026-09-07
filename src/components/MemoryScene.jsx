@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 
 function MemoryScene({ memory, onClose }) {
   const [dialogueIndex, setDialogueIndex] = useState(0);
-  const [showFlashback, setShowFlashback] =
-    useState(false);
-
-  const [afterFlashbackIndex, setAfterFlashbackIndex] =
-    useState(0);
+  const [showSecondImage, setShowSecondImage] = useState(false);
 
   const [displayedText, setDisplayedText] =
     useState("");
@@ -14,8 +10,8 @@ function MemoryScene({ memory, onClose }) {
   const [isTyping, setIsTyping] =
     useState(true);
 
-  const currentDialogue = showFlashback
-    ? memory.afterFlashback?.[afterFlashbackIndex]
+  const currentDialogue = showSecondImage
+    ? memory.afterFlashback?.[dialogueIndex]
     : memory.dialogue?.[dialogueIndex];
 
   // =========================
@@ -73,27 +69,28 @@ function MemoryScene({ memory, onClose }) {
     }
 
     // =========================
-    // FLASHBACK DIALOGUE
+    // SECOND IMAGE STAGE
     // =========================
 
-    if (showFlashback) {
+    if (showSecondImage) {
       if (
         memory.afterFlashback &&
-        afterFlashbackIndex <
+        dialogueIndex <
           memory.afterFlashback.length - 1
       ) {
-        setAfterFlashbackIndex(
+        setDialogueIndex(
           (prev) => prev + 1
         );
-      } else {
-        onClose();
+
+        return;
       }
 
+      onClose();
       return;
     }
 
     // =========================
-    // NORMAL DIALOGUE
+    // FIRST IMAGE STAGE
     // =========================
 
     if (
@@ -109,18 +106,21 @@ function MemoryScene({ memory, onClose }) {
     }
 
     // =========================
-    // FLASHBACK
+    // SWITCH TO SECOND IMAGE
     // =========================
 
-    if (memory.flashbackImage) {
-      setShowFlashback(true);
-      setAfterFlashbackIndex(0);
+    if (
+      memory.flashbackImage &&
+      memory.afterFlashback
+    ) {
+      setShowSecondImage(true);
+      setDialogueIndex(0);
 
       return;
     }
 
     // =========================
-    // FINISHED
+    // MEMORY FINISHED
     // =========================
 
     onClose();
@@ -156,61 +156,18 @@ function MemoryScene({ memory, onClose }) {
     currentDialogue,
     isTyping,
     dialogueIndex,
-    afterFlashbackIndex,
-    showFlashback
+    showSecondImage
   ]);
 
   // =========================
-  // FLASHBACK SCREEN
+  // CURRENT IMAGE
   // =========================
 
-  if (showFlashback) {
-    return (
-      <div
-        className="fullscreen flashback-screen"
-        onClick={next}
-      >
-        <div className="flashback-content">
-
-          <div className="flashback-label">
-            MEMORY FLASHBACK
-          </div>
-
-          <div className="conversation-frame">
-            <img
-              src={memory.flashbackImage}
-              alt="Conversation memory"
-            />
-          </div>
-
-          {currentDialogue && (
-            <div className="flashback-dialogue">
-
-              <div className="speaker">
-                {currentDialogue.speaker}
-              </div>
-
-              <p>
-                {displayedText}
-              </p>
-
-              <span>
-                {isTyping
-                  ? "▶"
-                  : "Click to continue ▶"}
-              </span>
-
-            </div>
-          )}
-
-        </div>
-      </div>
-    );
-  }
-
-  // =========================
-  // MEMORY SCREEN
-  // =========================
+  const currentImage =
+    showSecondImage &&
+    memory.flashbackImage
+      ? memory.flashbackImage
+      : memory.image;
 
   return (
     <div
@@ -232,10 +189,14 @@ function MemoryScene({ memory, onClose }) {
 
         </div>
 
+        {/* =========================
+            MEMORY IMAGE
+        ========================= */}
+
         <div className="photo-frame">
 
           <img
-            src={memory.image}
+            src={currentImage}
             alt={memory.title}
           />
 
@@ -244,6 +205,10 @@ function MemoryScene({ memory, onClose }) {
         <p className="memory-description">
           {memory.description}
         </p>
+
+        {/* =========================
+            DIALOGUE
+        ========================= */}
 
         {currentDialogue && (
           <div className="memory-dialogue">
