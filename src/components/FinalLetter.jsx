@@ -63,7 +63,7 @@ function FinalLetter() {
         </p>
 
         <p>
-            Second of all, thank you... for always finding the time to choose us, fir forgive me even when I fall short, for just... being you. Loving you has always been one of my favorite things to do.
+            Second of all, thank you... for always finding the time to choose us, for forgiving me even when I fall short, for just... being you. Loving you has always been one of my favorite things to do.
             You give me meaning, not just in loving, but also in living, because you are my inspiration. Everything that I have today, wouldn't be possible without you.
         </p>
 

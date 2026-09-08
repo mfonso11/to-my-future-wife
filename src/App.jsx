@@ -178,27 +178,56 @@ function App() {
       )}
 
       {gameState === "restored" && (
-        <div className="fullscreen restored-screen">
-          <div className="restored-content">
-            <p>Memory restored.</p>
+  <div className="fullscreen restored-screen">
+    <div className="restored-content">
+      <p>Memory restored.</p>
 
-            <p>Story restored.</p>
+      <p>Story restored.</p>
 
-            <h1>Identity restored.</h1>
+      <h1>Identity restored.</h1>
 
-            <div className="final-dialogue">
-              <p>Girl: "...I remember."</p>
-              <p>Guide: "You remembered."</p>
-              <p>Girl: "Who are you?"</p>
-              <p>Guide: "Someone who'll always be beside you"</p>
-            </div>
+      <div className="final-dialogue">
+        <p>Girl: "...It was him."</p>
 
-            <button onClick={continueToLetter}>
-              Continue
-            </button>
-          </div>
-        </div>
-      )}
+        <p>Guide: "You remembered him."</p>
+
+        <p>Girl: "I remember everything now."</p>
+
+        <p>Guide: "Then you don't need me anymore."</p>
+
+        <p>Girl: "Wait..."</p>
+
+        <p>Girl: "Who are you?"</p>
+
+        <p>Guide: "You really don't remember?"</p>
+
+        <p>Girl: "I've never seen you before."</p>
+
+        <p>Guide: "You didn't need to see me."</p>
+
+        <p>Guide: "You only needed to remember."</p>
+
+        <p>Girl: "Then why were you here?"</p>
+
+        <p>Guide: "To lead you back to him."</p>
+
+        <p>Girl: "..."</p>
+
+        <p>Guide: "That's all I was meant to do."</p>
+
+        <p>Girl: "Who are you?"</p>
+
+        <p>Guide: "Someone who'll always be beside you."</p>
+
+        <p>Guide: "Even when you can't remember me."</p>
+      </div>
+
+      <button onClick={continueToLetter}>
+        Continue
+      </button>
+    </div>
+  </div>
+)}
 
       {gameState === "letter" && <FinalLetter />}
     </div>

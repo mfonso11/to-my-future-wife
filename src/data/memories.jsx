@@ -103,6 +103,11 @@ const memories = {
       {
         speaker: "Memory",
         text: "But that's where your story began with him."
+      },
+
+      {
+        speaker: "Memory",
+        text: "There were still so many moments waiting to be remembered."
       }
     ]
   },
@@ -235,12 +240,37 @@ const memories = {
 
       {
         speaker: "Guide",
-        text: "A small moment."
+        text: "..."
       },
 
       {
         speaker: "Guide",
-        text: "But one neither of you forgot."
+        text: "Do you remember why that moment mattered?"
+      },
+
+      {
+        speaker: "Girl",
+        text: "Because that was when we finally said it."
+      },
+
+      {
+        speaker: "Memory",
+        text: "Two simple words."
+      },
+
+      {
+        speaker: "Memory",
+        text: "But they changed everything."
+      },
+
+      {
+        speaker: "Girl",
+        text: "And you weren't afraid anymore."
+      },
+
+      {
+        speaker: "Guide",
+        text: "Hahaha, yes... I wasn't afraid anymore."
       }
     ]
   },
@@ -308,18 +338,28 @@ const memories = {
       },
 
       {
-        speaker: "Memory",
-        text: "A promise to remember that day..."
+        speaker: "Guide",
+        text: "What kind of promise?"
+      },
+
+      {
+        speaker: "Girl",
+        text: "I don't remember..."
       },
 
       {
         speaker: "Memory",
-        text: "A promise that he'll always fight for you..."
+        text: "Not a promise that distance would disappear."
       },
 
       {
         speaker: "Memory",
-        text: "A promise... that will last forever."
+        text: "A promise that distance would never be the reason you gave up."
+      },
+
+      {
+        speaker: "Memory",
+        text: "And that promise still remains..."
       }
     ]
   },
@@ -329,86 +369,124 @@ const memories = {
   // FIRST MONTHSARY + 24 HOURS
   // =====================================================
 
-book: {
-  id: "book",
-  icon: "📖",
-  title: "More Than 24 Hours",
+  book: {
+    id: "book",
+    icon: "📖",
+    title: "More Than 24 Hours",
 
-  // First image
-  image: "/memories/book.jpg.jpg",
+    // First image
+    image: "/memories/book.jpg.jpg",
 
-  // Second image
-  flashbackImage: "/memories/first-monthsary.jpg.jpg",
+    // Second image
+    flashbackImage: "/memories/first-monthsary.jpg.jpg",
 
-  description:
-    "Some memories don't need an ending.",
+    description:
+      "Some memories don't need an ending.",
 
-  dialogue: [
-    {
-      speaker: "Girl",
-      text: "A book..."
-    },
+    dialogue: [
+      {
+        speaker: "Girl",
+        text: "A book..."
+      },
 
-    {
-      speaker: "Guide",
-      text: "One that you wanted."
-    }
-  ],
+      {
+        speaker: "Guide",
+        text: "One that you wanted."
+      }
+    ],
 
-  afterFlashback: [
-    {
-      speaker: "Girl",
-      text: "Our first monthsary."
-    },
+    afterFlashback: [
+      {
+        speaker: "Girl",
+        text: "Our first monthsary."
+      },
 
-    {
-      speaker: "Memory",
-      text: "And somehow..."
-    },
+      {
+        speaker: "Memory",
+        text: "He gave you something you wanted."
+      },
 
-    {
-      speaker: "Memory",
-      text: "One day wasn't enough."
-    },
+      {
+        speaker: "Memory",
+        text: "But somehow..."
+      },
 
-    {
-      speaker: "Girl",
-      text: "For the first time..."
-    },
+      {
+        speaker: "Girl",
+        text: "Hm?"
+      },
 
-    {
-      speaker: "Girl",
-      text: "We spent more than 24 hours together."
-    },
+      {
+        speaker: "Memory",
+        text: "The gift wasn't the best part."
+      },
 
-    {
-      speaker: "Memory",
-      text: "Talking."
-    },
+      {
+        speaker: "Girl",
+        text: "Then what was?"
+      },
 
-    {
-      speaker: "Memory",
-      text: "Laughing."
-    },
+      {
+        speaker: "Memory",
+        text: "It was the time you spent together."
+      },
 
-    {
-      speaker: "Memory",
-      text: "Simply being together."
-    },
+      {
+        speaker: "Memory",
+        text: "For the first time..."
+      },
 
-    {
-      speaker: "Girl",
-      text: "..."
-    },
+      {
+        speaker: "Memory",
+        text: "There was no screen between you two."
+      },
 
-    {
-      speaker: "Girl",
-      text: "I remember."
-    },
-  ]
-},
+      {
+        speaker: "Memory",
+        text: "There weren't Goodbye's, or I'll miss you."
+      },
 
-}
+      {
+        speaker: "Memory",
+        text: "It's just you two... Two young and beautiful souls, wishing that time would just... pause"
+      },
 
+      {
+        speaker: "Memory",
+        text: "No distance."
+      },
+
+      {
+        speaker: "Memory",
+        text: "No waiting."
+      },
+
+      {
+        speaker: "Memory",
+        text: "No worrying of the time."
+      },
+
+      {
+        speaker: "Memory",
+        text: "Just..."
+      },
+
+      {
+        speaker: "Memory",
+        text: "Simply being together."
+      },
+
+      {
+        speaker: "Girl",
+        text: "..."
+      },
+
+      {
+        speaker: "Girl",
+        text: "I remember."
+      }
+    ]
+  }
+};
 
 export default memories;
